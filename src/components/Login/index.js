@@ -20,7 +20,7 @@ export default function Login({ changeStatus }) {
       })
       .catch((err)=>{
         console.log(err);
-        alert('Ops parece que deu algum erro.');
+        alert('Ops parece que algo está errado!');
         return;
       })
 

@@ -12,10 +12,6 @@ import Login from './src/components/Login';
 import TaskList from './src/TaskList';
 import firebase from './src/services/firebaseConnection';
 
-// let tasks = [
-//   {key: '1', nome: 'primeira tarefa'},
-//   {key: '2', nome: 'segunda tarefa'}
-// ]
 
 export default function App() {
   const [user, setUser] = useState(null);

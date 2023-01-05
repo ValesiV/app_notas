@@ -2,8 +2,7 @@ import React from 'react';
 import { View, 
   Text, 
   StyleSheet,
-  TouchableOpacity,
-  TouchableWithoutFeedback} from 'react-native';
+  TouchableOpacity} from 'react-native';
 
 import Feather from 'react-native-vector-icons/Feather';
 
