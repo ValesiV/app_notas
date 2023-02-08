@@ -26,9 +26,9 @@ export const Input = styled.TextInput`
 
 
 export const ButtonAdd = styled.TouchableOpacity`
-    margin-left: 0.5px;
+    margin-left: 0.2px;
     background-color: #121212;
-    width: 13%;
+    width: 12%;
     height: 50px;
     border-width: 0.8px;
     border-color: #121212;
@@ -41,4 +41,32 @@ export const TextAdd = styled.Text`
     color: #fff;
 `;
 
+export const Settings = styled.TouchableOpacity`
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    left: 90%;
+    margin-bottom: 15px;
+    z-index: 99;
 
+`;
+
+export const DropDownView = styled.View`
+    z-index: 99;
+    position: absolute;
+    top: 40px;
+    left: 186px;
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    background-color: #121212;
+`;
+
+export const Options = styled.TouchableHighlight`
+
+`;
+
+export const OptionsText = styled.Text`
+
+`;
