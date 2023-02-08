@@ -1,50 +1,36 @@
 import React from 'react';
-import { View, 
-  Text, 
-  StyleSheet,
-  TouchableOpacity} from 'react-native';
-
+import { View } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 
-export default function TaskList({data, deleteItem, editItem}){
-    return(
-        <View style={styles.container}>
+import {
+    Container,
+    ContainerChild,
+    TextName,
+    ButtonIcons
+} from './styles';
+
+
+export default function TaskList({ data, deleteItem, editItem }) {
+    return (
+        <Container>
             <View>
-                <Text style={{color: '#FFF', fontSize: 18}}>
+                <TextName>
                     {data.nome}
-                </Text>
+                </TextName>
             </View>
 
-            <View style={styles.containerChild}>
-                <TouchableOpacity
-                style={{marginHorizontal: 3}}
-                onPress={() => editItem(data)}>
+            <ContainerChild>
+                <ButtonIcons
+                    onPress={() => editItem(data)}>
                     <Feather name='edit' color='#FFF' size={20} />
-                </TouchableOpacity>
+                </ButtonIcons>
 
-                <TouchableOpacity
-                style={{marginHorizontal: 3}}
-                onPress={() => deleteItem(data.key)}>
+                <ButtonIcons
+                    onPress={() => deleteItem(data.key)}>
                     <Feather name='trash' color='#FFF' size={20} />
-                </TouchableOpacity>
-            </View>
-            
-        </View>
+                </ButtonIcons>
+            </ContainerChild>
+
+        </Container>
     )
 }
-
-const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        padding: 15,
-        backgroundColor: '#000',
-        borderRadius: 10,
-        marginTop: 10,
-    },
-    containerChild: {
-        flexDirection: 'row',
-    },
-})
-
