@@ -8,10 +8,15 @@
 - Inserir, excluir ou editar as notas.
 - Utilização do Firebase Realtime Database.
 
-#### Ainda em desenvolvimento:
+Atualizações:
 - Manter a senha oculta ao digitar.
+- Implementação de dropdown para permitir novas funcionalidades.
+- Implementação de Styled Components no projeto.
+
+#### Ainda em desenvolvimento:
 - Recuperação e alteração de senha.
-- Excluir usuário.
+- Logout.
+- Deletar conta.
 - Melhorias na edição de notas.
 - Fixar notas no topo.
 - Alteração de cores do app.
