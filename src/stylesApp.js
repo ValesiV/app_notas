@@ -41,6 +41,7 @@ export const TextAdd = styled.Text`
     color: #fff;
 `;
 
+
 export const Settings = styled.TouchableOpacity`
     width: 30px;
     height: 30px;
@@ -58,15 +59,28 @@ export const DropDownView = styled.View`
     top: 40px;
     left: 186px;
     width: 50%;
-    height: 100px;
     padding: 10px;
-    background-color: #121212;
+    background-color: #1c1c1e;
+    border-radius: 4px;
 `;
 
 export const Options = styled.TouchableHighlight`
-
+    margin-top: 5px;
 `;
 
 export const OptionsText = styled.Text`
-
+    font-size: 16px;
+    color: #fff;
 `;
+
+/*
+#000000 - Black
+#1c1c1e - Dark Gray
+#333333 - Gray
+#4d4d4f - Light Gray
+#666666 - Lighter Gray
+#b3b3b3 - Lightest Gray
+#e6e6e6 - Off White
+#f2f2f2 - White Smoke
+#ffffff - White
+*/

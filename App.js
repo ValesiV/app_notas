@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FlatList, Keyboard, View} from 'react-native';
+import {FlatList, Keyboard, View} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 
 import {
@@ -8,6 +8,7 @@ import {
   Input,
   ButtonAdd,
   TextAdd,
+  AreaList,
   Settings,
   DropDownView,
   Options,
@@ -25,7 +26,6 @@ export default function App() {
   const [task, setTask] = useState([]);
   const [key, setKey] = useState('');
   const inputRef = useRef(null);
-
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -65,11 +65,11 @@ export default function App() {
         })
           .then(() => {
             alert('Nota Atualizada!')
-            const taskIndex = task.findIndex((item => item.key === key))
+            const taskIndex = task.findIndex((item => item.key === key));
             const taskClone = task;
             taskClone[taskIndex].nome = newTask
-            setTask([...taskClone])
-          })
+            setTask([...taskClone]);
+          });
 
         Keyboard.dismiss();
         setNewTask('');
@@ -89,8 +89,8 @@ export default function App() {
             nome: newTask,
           };
 
-          setTask(oldtasks => [...oldtasks, data])
-        })
+          setTask(oldtasks => [...oldtasks, data]);
+        });
 
       Keyboard.dismiss();
       setNewTask('');
@@ -125,12 +125,16 @@ export default function App() {
           {showDropdown && (
             <DropDownView>
 
-              <Options onPress={() => setSelectedOption('Logout')}>
-                <OptionsText style={{color: '#FFF'}}>Logout</OptionsText>
+              <Options onPress={() => setSelectedOption('DarkMode')}>
+                <OptionsText>Dark Mode</OptionsText>
               </Options>
 
-              <Options onPress={() => setSelectedOption('DarkMode')}>
-                <OptionsText style={{color: '#FFF'}}>Dark Mode</OptionsText>
+              <Options onPress={() => setSelectedOption('Outros')}>
+                <OptionsText>Outros</OptionsText>
+              </Options>
+
+              <Options onPress={() => setSelectedOption('Logout')}>
+                <OptionsText>Logout</OptionsText>
               </Options>
 
             </DropDownView>
@@ -165,16 +169,3 @@ export default function App() {
       </Container>
     );
   }
-
-/*
-      <Options onPress={() => setVisibleModal(visibleModal ? false : true)} >
-          <Feather name='settings' size={30} color='#FFF' />
-      </Options>
-      
-      <Modal
-      animationType="slide" 
-      transparent={true} 
-      visible={visibleModal}>
-        <OptionsScreen />
-      </Modal>
-*/
